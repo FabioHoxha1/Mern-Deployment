@@ -3,17 +3,29 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> b992d276e88d02265485d509695c118537a26739
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
+=======
+  "description": "",
+>>>>>>> b992d276e88d02265485d509695c118537a26739
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.10.0"
+<<<<<<< HEAD
   },
   "description": ""
+=======
+  }
+>>>>>>> b992d276e88d02265485d509695c118537a26739
 }

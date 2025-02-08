@@ -10,6 +10,7 @@ function App() {
   return (
     <PatientProvider>
       <BrowserRouter>
+<<<<<<< HEAD
         <div className="app-container">
           <Header />
           <main className="main-content">
@@ -20,6 +21,16 @@ function App() {
               <Route path="/patients/edit/:id" element={<EditPatient />} />
             </Routes>
           </main>
+=======
+        <div className="container mx-auto px-4 py-8">
+          <Header />
+          <Routes>
+            <Route path="/" element={<AddPatient />} />
+            <Route path="/patients" element={<PatientList />} />
+            <Route path="/patients/:id" element={<PatientDetails />} />
+            <Route path="/patients/edit/:id" element={<EditPatient />} />
+          </Routes>
+>>>>>>> b992d276e88d02265485d509695c118537a26739
         </div>
       </BrowserRouter>
     </PatientProvider>
