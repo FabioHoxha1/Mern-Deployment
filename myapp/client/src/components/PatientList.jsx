@@ -17,7 +17,21 @@ const PatientList = () => {
       }
     };
     fetchPatients();
-  }, []);
+  }, [dispatch]);
+
+  const handleDelete = async (patientId) => {
+    const confirmDelete = window.confirm('Are you sure you want to delete this patient?');
+    
+    if (confirmDelete) {
+      try {
+        await patientService.deletePatient(patientId);
+        dispatch({ type: 'DELETE_PATIENT', payload: patientId });
+      } catch (error) {
+        console.error('Error deleting patient:', error);
+        alert('Failed to delete patient. Please try again.');
+      }
+    }
+  };
 
   const filteredPatients = () => {
     switch (filter) {
