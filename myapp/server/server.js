@@ -12,6 +12,12 @@ mongoose.connect('mongodb://localhost/hospital_db')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
+// Default route
+app.get("/", (req, res) => {
+  res.send("Server is running...");
+});
+
+// API routes
 app.use('/api/patients', require('./routes/patient.routes'));
 
 const PORT = process.env.PORT || 8000;
